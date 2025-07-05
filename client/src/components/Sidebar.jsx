@@ -8,7 +8,7 @@ import { ChatContext } from "../context/ChatContext";
 import { useEffect } from "react";
 import { useState } from "react";
 import { RxAvatar } from "react-icons/rx";
-import avatarIcon from '../assets/avatar_icon.png';
+import avatarIcon from '/avatar_icon.png';
 import { IoMdExit } from "react-icons/io";
 
 const Sidebar = () => {

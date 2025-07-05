@@ -3,7 +3,7 @@ import { RxAvatar } from "react-icons/rx";
 import { imagesDummyData } from '../assets/assets';
 import { ChatContext } from '../context/ChatContext';
 import { AuthContext } from '../context/AuthContext';
-import avatarIcon from '../assets/avatar_icon.png';
+import avatarIcon from '/avatar_icon.png';
 import toast from 'react-hot-toast';
 const UserBar = () => {
   const {selectedUser, texts} = useContext(ChatContext);

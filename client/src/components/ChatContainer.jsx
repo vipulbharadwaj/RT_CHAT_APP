@@ -14,7 +14,7 @@ import toast from "react-hot-toast";
 import { IoMdExit } from "react-icons/io";
 import { IoMdArrowBack } from "react-icons/io";
 import { IoExitOutline } from "react-icons/io5";
-import avatarIcon from "../assets/avatar_icon.png";
+import avatarIcon from "/avatar_icon.png";
 
 const ChatContainer = ({ onToggleInfo, onCloseChat }) => {
   const scrollEnd = useRef();
@@ -65,7 +65,7 @@ const ChatContainer = ({ onToggleInfo, onCloseChat }) => {
   }, [texts]);
 
   return selectedUser ? (
-    <div className="h-full p-5  overflow-y-auto bg-[url('/chat-bg2.png')] bg-cover bg-center relative backdrop-blur-lg">
+    <div className="h-full p-2 overflow-y-auto sm:p-4  relative backdrop-blur-lg">
       <div className="flex items-center gap-3 py-3 mx-4 border-b border-stone-500">
       <div className=" rounded-full border-2 border-amber-400 p-[0.8px]">
         <img
@@ -84,7 +84,7 @@ const ChatContainer = ({ onToggleInfo, onCloseChat }) => {
         <div className="flex items-center gap-4 ml-auto">
           <LuBadgeInfo
             onClick={onToggleInfo}
-            className=" text-2xl sm:ml-0 sm:block"
+            className=" hidden text-2xl sm:ml-0 sm:block"
           />
           <IoExitOutline
             onClick={onCloseChat}
@@ -94,7 +94,7 @@ const ChatContainer = ({ onToggleInfo, onCloseChat }) => {
       </div>
 
       {/** Chat Area **/}
-      <div className="flex flex-col h-[calc(100%-120px)] overflow-y-scroll p-2 pb-6">
+      <div className="flex flex-col bg-[url('/chat-bg2.png')] bg-cover bg-center h-[calc(100%-120px)] overflow-y-scroll px-4 py-6 pb-6">
         {texts.map((message, index) => {
           const isMe = message.senderId === authUser._id;
 

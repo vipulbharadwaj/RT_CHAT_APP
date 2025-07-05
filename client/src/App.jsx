@@ -11,7 +11,7 @@ const App = () => {
 
 
   return (
-    <div className="bg-[url('./src/assets/bg-image2.svg')] bg-cover min-h-screen">
+    <div className="bg-[url('/bg-image2.svg')] bg-cover min-h-screen">
       <Toaster />
 
       <Routes>
